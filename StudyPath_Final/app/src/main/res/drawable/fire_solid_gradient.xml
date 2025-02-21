@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FF5722"
+            android:endColor="#FFC107"
+            android:angle="45" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+    <!-- Fire Icon Layer -->
+    <item android:drawable="@drawable/fire_solid" />
+</layer-list>

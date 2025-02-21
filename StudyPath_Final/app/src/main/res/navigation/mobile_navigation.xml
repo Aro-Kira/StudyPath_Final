@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.studypath_final.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_task_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_task"
+        android:name="com.example.studypath_final.ui.task.TaskFragment"
+        android:label="@string/menu_task"
+        tools:layout="@layout/fragment_task">
+        <action
+            android:id="@+id/action_nav_home_to_nav_task"
+            app:destination="@id/nav_task"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_achievement"
+        android:name="com.example.studypath_final.ui.Achievement.AchievementFragment"
+        android:label="@string/activity_achieve"
+        tools:layout="@layout/fragment_achievement">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_studybuddies"
+        android:name="com.example.studypath_final.ui.Study.StudyBuddyListFragment"
+        android:label="@string/activity_studybuddies"
+        tools:layout="@layout/activity_studybuddy_chat">
+
+    </fragment>
+
+
+</navigation>

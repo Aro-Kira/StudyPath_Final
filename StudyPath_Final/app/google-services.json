@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "812270599677",
+    "firebase_url": "https://studypathfinal-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "studypathfinal",
+    "storage_bucket": "studypathfinal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812270599677:android:fc9680a67670a5f0366d94",
+        "android_client_info": {
+          "package_name": "com.example.studypath_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMBv5xyPGoqIkRKf7Dw0LPYf7qAKxYmUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

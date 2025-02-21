@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_black"
+            android:orientation="vertical"
+           >
+
+            <!-- Title and Edit Icon -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1571E4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/task_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Task Title"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/editTaskIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:clickable="true"
+                    android:contentDescription="Edit icon"
+                    android:focusable="true"
+                    android:src="@drawable/pencil"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <!-- Task Description -->
+            <TextView
+                android:id="@+id/task_card_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingBottom="30dp"
+                android:text="Task Notes"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:backgroundTint="@color/white"
+                android:background="?android:attr/listDivider" />
+            <TextView
+                android:id="@+id/task_card_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Due:"
+                android:textColor="#CACACA"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:backgroundTint="@color/white"
+                android:background="?android:attr/listDivider" />
+
+            <!-- Progress Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_horizontal|center_vertical"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:maxHeight="10dip"
+                    android:minWidth="280dip"
+                    android:minHeight="10dip"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progress_bg"
+                    android:progressTint="#0091F2" />
+
+                <TextView
+
+                    android:id="@+id/progress_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0/0"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/task_complete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#09B829"
+                    android:gravity="center"
+                    android:text="COMPLETE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+            <!-- Progress Counter -->
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android/tools"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/edit_root_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/two_tone_solid"
+        tools:context=".EditTask">
+
+        <!-- Task Title -->
+        <EditText
+            android:id="@+id/edit_task_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Task Title"
+            android:padding="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Notes -->
+        <EditText
+            android:id="@+id/edit_task_notes"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/white"
+            android:hint="Notes"
+            android:padding="12dp"
+            android:textAlignment="viewStart"
+            android:gravity="start|top"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_task_title" />
+
+        <!-- Checklist Section -->
+        <Button
+            android:id="@+id/edit_add_checklist_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#4A90E2"
+            android:text="+ New Checklist Entry"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_textView2" />
+
+        <LinearLayout
+            android:id="@+id/edit_checklist_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_add_checklist_item" >
+        </LinearLayout>
+
+        <!-- Scheduling Section -->
+        <TextView
+            android:id="@+id/edit_scheduling_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Scheduling"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_checklist_container" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/edit_startDateCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_scheduling_label">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edit_startDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="Select Start Date"
+                    android:textSize="16sp"
+                    android:background="@drawable/date_picker_background"
+                    android:drawableEnd="@drawable/calendar_days"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edit_endDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="Select End Date"
+                    android:textSize="16sp"
+                    android:background="@drawable/date_picker_background"
+                    android:drawableEnd="@drawable/calendar_days"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day Selectors -->
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/edit_save_task_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4A90E2"
+            android:text="Save Task"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_startDateCard" />
+
+        <TextView
+            android:id="@+id/edit_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Checklist"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_task_notes" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/edit_delete_task_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:text="Delete Task"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_save_task_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
